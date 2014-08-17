@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 最外层LinearLayout -->
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="4dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="4dip"
+        android:paddingTop="4dip" >
+
+        <!-- 月 日 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/item_past_event_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/item_past_event_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 图片内容content -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginTop="8dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/item_past_event_pic_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dip"
+                    android:layout_marginTop="4dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/item_past_event_pic1"
+                            android:layout_width="50dip"
+                            android:layout_height="50dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/head_pic_male" />
+
+                        <ImageView
+                            android:id="@+id/item_past_event_pic4"
+                            android:layout_width="50dip"
+                            android:layout_height="50dip"
+                            android:layout_marginTop="1dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/head_pic_male" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/item_past_event_pic2"
+                            android:layout_width="50dip"
+                            android:layout_height="50dip"
+                            android:layout_marginLeft="1dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/head_pic_male" />
+
+                        <ImageView
+                            android:id="@+id/item_past_event_pic3"
+                            android:layout_width="50dip"
+                            android:layout_height="50dip"
+                            android:layout_marginLeft="1dip"
+                            android:layout_marginTop="1dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/head_pic_male" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/item_past_event_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#434341"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/item_past_event_memo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#414141"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="4dip" >
+
+                <TextView
+                    android:id="@+id/item_past_event_total_pics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="#848383"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/item_past_event_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/comment_bg" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

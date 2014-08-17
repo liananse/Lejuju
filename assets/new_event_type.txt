@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "电影",
+    "picurl": "new_event_type/1.png"
+  },
+  {
+    "id": 2,
+    "name": "聚会",
+    "picurl": "new_event_type/2.png"
+  },
+  {
+    "id": 3,
+    "name": "K歌",
+    "picurl": "new_event_type/3.png"
+  },
+  {
+    "id": 7,
+    "name": "旅游",
+    "picurl": "new_event_type/7.png"
+  },
+  {
+    "id": 8,
+    "name": "美食",
+    "picurl": "new_event_type/8.png"
+  },
+  {
+    "id": 9,
+    "name": "其它",
+    "picurl": "new_event_type/9.png"
+  }
+]

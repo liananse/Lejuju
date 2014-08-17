@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.medialab.lejuju.views.XListView
+        android:id="@+id/event_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:divider="@null"
+        android:fastScrollEnabled="false"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        android:listSelector="@null"
+        android:paddingBottom="50dip"
+        android:scrollingCache="true" >
+    </com.medialab.lejuju.views.XListView>
+
+</LinearLayout>

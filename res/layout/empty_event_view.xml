@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dip" >
+
+        <ImageView
+            android:id="@+id/empty_logo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dip"
+            android:src="@drawable/home_icon" />
+
+        <TextView
+            android:id="@+id/tips_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="20dip"
+            android:text="附近还没有公开活动呢！"
+            android:textColor="@color/header_text_color"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/tips_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="50dip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dip"
+            android:text="Tips:你可以通过活动来收集和分享以往的活动照片"
+            android:textColor="#888888"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

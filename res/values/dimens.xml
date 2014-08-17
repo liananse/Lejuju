@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Default height of an action bar. -->
+    <dimen name="action_bar_default_height">48dip</dimen>
+    
+    <dimen name="item_event_time_size">10sp</dimen>
+    <dimen name="item_event_creater_size">10sp</dimen>
+    <dimen name="item_event_title_size">16sp</dimen>
+    
+    <dimen name="join_event_entry_title_size">22sp</dimen>
+    <dimen name="date_picker_time_size">13sp</dimen>
+    <dimen name="date_picker_type_size">10sp</dimen>
+    
+    <!-- add by zenghui 2013.09.04 header view title text size -->
+    <dimen name="action_bar_title_text_size">22sp</dimen>
+    
+    <!-- add by zenghui 2013.09.06 header view line px -->
+    <dimen name="header_line_up_height">1px</dimen>
+    <dimen name="header_line_down_height">2px</dimen>
+    
+    <dimen name="pre_view_padding">5dp</dimen>
+    <dimen name="pre_view_pic">45dp</dimen>
+    
+    <!-- add by zenghui 2013.09.23 -->
+    <dimen name="event_detail_pic_height">400dip</dimen>
+    <dimen name="event_detail_pic_margin_top">-100dip</dimen>
+    <dimen name="event_detail_pic_shown_height">300dip</dimen>
+    <dimen name="event_detial_alphaheight">200dip</dimen>
+    
+    <!-- add by zenghui 2013.09.24 -->
+    <dimen name="trends_padding_top">8dip</dimen>
+    <dimen name="trends_padding_left">18dip</dimen>
+    <dimen name="padding_left_right">10dip</dimen>
+</resources>

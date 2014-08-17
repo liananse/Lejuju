@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.medialab.lejuju"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="11"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+    <!-- renren login need this permission -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" > 
+    </uses-permission>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" >
+    </uses-permission>
+    
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="525df07b56240b4bc604250a" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="google" />
+
+        <!-- BAIDU API Key -->
+        <meta-data
+            android:name="api_key"
+            android:value="fj5lu2litPpxSGvojBXUr17d" />
+
+        <activity
+            android:name=".MWelcomeActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MMainTabActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        <activity
+            android:name=".main.login.LLoginActivity"
+            android:windowSoftInputMode="stateVisible"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name=".main.login.LRegisterActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.login.LOpenContactsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.login.LRegisterWithMobileActivity"
+            android:windowSoftInputMode="stateVisible"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.login.LRegisterInputPasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.login.LLoginEntryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.login.LInputInviteCodeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name=".main.userinfo.UserInfoEntryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name=".main.userinfo.UserInfoSelectRegionProvinceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name=".main.userinfo.UserInfoSelectRegionCityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity 
+            android:name=".main.userinfo.UserInfoEditSignatureActivity"
+            android:windowSoftInputMode="stateVisible"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.userinfo.UserInfoPastEventActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.medialab.lejuju.main.events.EJoinEventEntryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name=".main.joinevent.JSelectEventTypeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name=".main.joinevent.JSelectLocationFromMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name=".main.joinevent.JInviteFriendsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        <activity
+            android:name=".main.joinevent.JInviteContactsFriendsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        <activity
+            android:name=".main.joinevent.JCreateEventActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        <activity
+            android:name=".main.joinevent.JSelectEventByCodeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.friends.FFriendsEntryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        <activity 
+            android:name=".main.friends.FAddNewFriendsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.friends.FNewFriendsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.friends.FHaveNewFriendsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name=".main.more.MMoreEntryActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <activity
+            android:name=".main.more.MAboutPyjActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.eventdetail.EDInviteFriendsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.eventdetail.EDEventInfoActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.photowall.BigPictureActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.eventdetail.EventDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="218.18.232.10"
+                    android:pathPrefix="/juju/invite/event"
+                    android:port="10086"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".main.comment.CEventDiscussActivity"
+            android:windowSoftInputMode="stateUnchanged"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.comment.CEventAlbumsCommentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name=".main.login.LRegisterMobileActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <activity
+            android:name=".main.photowall.PhotoImagePagerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.photowall.PlayPhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.msgcenter.MCMsgCenterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".main.trends.TTrendsEntryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity 
+            android:name="com.renn.rennsdk.oauth.OAuthActivity"
+			android:configChanges="orientation|navigation|keyboardHidden">
+        </activity>
+        
+        <activity android:name=".main.eventdetail.CustomGalleryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity android:name="com.medialab.lejuju.main.eventdetail.UploadPicActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        
+        <service android:name="com.medialab.lejuju.service.UploadPicService"></service>
+        
+        <!-- push service client -->
+        <receiver android:name="com.medialab.lejuju.push.PushMessageReceiver" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- push service -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" />
+        
+        <!-- push service end -->
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
+    </application>
+
+</manifest>

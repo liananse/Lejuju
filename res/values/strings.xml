@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">朋友聚</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="xlistview_header_hint_normal">下拉可以刷新</string>
+    <string name="xlistview_header_hint_ready">松开可以刷新</string>
+    <string name="xlistview_header_hint_loading">正在加载…</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    
+    <!-- 2012.07.02 zenghui main.login-->
+    <string name="login_activity_title">登录</string>
+    <string name="login_activity_password">密码</string>
+	<string name="login_activity_cellphonenum">手机号</string>
+	<string name="login_activity_forgetpassword">忘记密码</string>
+	<string name="login_activity_fail">登录失败</string>
+	<string name="login_activity_renren">人人网帐号登录</string>
+	
+	<string name="register_activity_title">注册</string>
+	<string name="register_activity_cellphonenum">手机号</string>
+	<string name="register_activity_password">密码</string>
+	<string name="register_activity_confirm_password">确认密码</string>
+	<string name="register_activity_nickname">昵称</string>
+	<string name="register_activity_gender">性别</string>
+	<string name="register_activity_region">地区</string>
+	<string name="register_activity_statement_part1">已阅读并同意</string>
+	<string name="register_activity_statement_part2">免责声明</string>
+	<string name="register_activity_default_region">广东-深圳</string>
+	<string name="register_activity_password_hint">请输入一个8至16位的密码</string>
+	<string name="register_activity_nickname_hint">用户名最长不得超过14个字符</string>
+	
+    <string name="open_contacts_activity_title">通讯录匹配</string>
+    <string name="open_contacts_activity_pass">跳过</string>
+    <string name="open_contacts_activity_enable">启用</string>
+    <string name="open_contacts_activity_statement">启用手机通讯录，能快速帮你找到一起在使用朋友聚的朋友，我们会严格保护好您的私密信息。</string>
+    
+    <string name="input_cellphonenum_tips">请输入手机号</string>
+    <string name="input_password_tips">请输入密码</string>
+    <string name="input_nickname_tips">请输入昵称</string>
+    <string name="input_confirm_password_tips">请输入确认密码</string>
+    <string name="input_logical_cellphonenum_tips">请输入正确的手机号码</string>
+    <string name="input_logical_confirm_password">确认密码与密码不一致</string>
+    <string name="input_logical_password">密码必须包含8至16位字符</string>
+    <string name="input_statement_tips">阅读并同意免责声明才能注册</string>
+    <!-- 2012.07.02 zenghui main.userinfo -->
+    <string name="userinfo_activity_self_title">我的资料</string>
+    <!-- 
+    <string name="userinfo_activity_self_head_icon">头像</string>
+    <string name="userinfo_activity_self_nickname">昵称</string>
+    <string name="userinfo_activity_self_gender">性别</string>
+     -->
+    <string name="userinfo_activity_title">个人资料</string>
+    <string name="userinfo_activity_region">地区</string>
+    <string name="userinfo_activity_cellphonenum">手机号</string>
+    <string name="userinfo_activity_signature">个性签名</string>
+    <string name="userinfo_activity_region_select">地区选择</string>
+    <string name="userinfo_activity_graduated">毕业学校</string>
+    <string name="userinfo_activity_company">公司信息</string>
+    <string name="userinfo_activity_event_albums">活动相册</string> 
+    <string name="userinfo_activity_add_friend">添加为好友</string>
+    <string name="userinfo_activity_focus_friend">关注</string>
+    <string name="userinfo_activity_pass_friend">通过验证</string>
+    <string name="userinfo_activity_status_6">等待验证</string>
+    <string name="userinfo_activity_status_0">陌生人</string>
+    
+    
+    <!-- 2012.07.08 zenghui main.joinevent -->
+    <string name="join_event_entry_title">活动</string>
+    
+    <string name="select_event_type_title">活动类型</string>
+    
+    <string name="edit_event_activity_title">活动编辑</string>
+    <string name="edit_event_activity_topic">活动主题</string>
+    <string name="edit_event_activity_time">时间</string>
+    <string name="edit_event_activity_location">地点</string>
+    <string name="edit_event_activity_people_num">人数</string>
+    <string name="edit_event_activity_per_cost">人均消费</string>
+    <string name="edit_event_activity_cost_type">消费方式</string>
+    <string name="edit_event_activity_add_time">\n添加时间\n</string>
+    <string name="edit_event_activity_numof_people_tips1">5人以下</string>
+    <string name="edit_event_activity_numof_people_tips2">6–10人</string>
+    <string name="edit_event_activity_numof_people_tips3">11–20人</string>
+    <string name="edit_event_activity_numof_people_tips4">20人以上</string>
+    <string name="edit_event_activity_cost_type_aa">AA</string>
+    <string name="edit_event_activity_cost_type_me">我请</string>
+    <string name="edit_event_activity_cost_type_other">其他</string>
+    <string name="edit_event_activity_cost_type_other_hint">请输入消费方式</string>
+    <string name="edit_event_activity_per_cost_tips1">50以下</string>
+    <string name="edit_event_activity_per_cost_tips2">50–100</string>
+    <string name="edit_event_activity_per_cost_tips3">100–200</string>
+    <string name="edit_event_activity_per_cost_tips4">200以上</string>
+    <string name="edit_event_activity_open_event_tips">允许公开活动信息</string>
+    <string name="edit_event_activity_friend_invite_friends">允许朋友邀请好友</string>
+    <string name="edit_event_activity_remark">活动简介</string>
+    <string name="edit_event_activity_delete_location">删除</string>
+    <string name="edit_event_activity_add_new_location">点击添加新地点</string>
+    
+    <string name="select_time_activity_title">选择时间</string>
+    <string name="select_time_activity_begin_time">开始：</string>
+    <string name="select_time_activity_end_time">结束：</string>
+    <string name="select_time_error_illegal">时间不合法</string>
+    <string name="select_time_month">月</string>
+    <string name="select_time_day">日</string>
+    <string name="select_time_hour">时</string>
+    <string name="select_time_minute">分</string>
+    <string name="select_time_delete">删除</string>
+    
+    <string name="time_picker_cancel">取消</string>
+    <string name="time_picker_done">完成</string>
+    <string name="time_picker_title">时间</string>
+    <string name="select_location_activity_title">选择地点</string>
+    <string name="select_location_activity_tips">搜索或长按地图指定地点</string>
+    <string name="select_location_no_location_find">抱歉，未找到结果</string>
+    <string name="select_location_ok_btn">查找</string>
+    
+    <string name="invite_friends_activity_title">邀请好友</string>
+    <string name="invite_contacts_friends_activity_title">邀请通讯录好友</string>
+    <string name="invite_friends_activity_search_tips">搜索</string>
+    <string name="invite_friends_activity_search_num">搜号码</string>
+    <string name="invite_friends_activity_search_mobile">邀请通讯录好友</string>
+    <string name="invite_friends_activity_search_weixin">邀请微信好友</string>
+    <string name="invite_friends_activity_search_pengyouquan">邀请朋友圈好友</string>
+    <string name="invite_friends_activity_search_num_hint">手机号/JuJu帐号</string>
+    <string name="invite_friends_activity_audit_hint">请输入验证信息</string>
+    <string name="invite_friends_activity_send_btn">发送</string>
+    <string name="invite_friends_activity_cancel_btn">取消</string>
+    
+    <!-- 2012.07.08 zenghui main.friends -->
+    <string name="friends_entry_title">朋友们</string>
+    <string name="friends_entry_add_friends">添加好友</string>
+    <string name="friends_entry_new_friends">新的朋友</string>
+    <!-- 2012.07.08 zenghui main.more -->
+    <string name="more_entry_title">更多</string>
+    
+    <!-- 2012.07.08 zenghui main.pastevent -->
+    <string name="past_event_entry_title">以往活动</string>
+    <string name="my_event_entry_attend_event">参加的</string>
+    <string name="my_event_entry_interest_event">感兴趣</string>
+    <string name="my_event_entry_past_event">以往的</string>
+    
+    <string name="register_mobile_activity_btn">完成</string>
+    <string name="register_mobile_head">+86</string>
+    <string name="register_mobile_hint">请输入手机号</string>
+    <string name="register_verify_code">验证码</string>
+    <string name="register_verify_code_hint">请输入验证码</string>
+    <string name="register_verify_code_btn">获取验证码</string>
+    <string name="register_invite_code">邀请码</string>
+    <string name="register_invite_code_hint">请输入邀请码</string>
+    <string name="register_invite_code_text">如果有朋友邀请你的话，请填写邀请码</string>
+    <string name="register_mobile_title">绑定手机</string>
+    
+    <!-- 2012.08.02 zenghui main.eventdetail -->
+    <string name="event_detail_title">活动详情</string>
+    <string name="event_detail_interest">感兴趣</string>
+    <string name="event_detail_i_join">要参加</string>
+    
+    <!-- 2012.08.21 zenghui main.photowall -->
+    <string name="photo_wall_share_email">电子邮件</string>
+    <string name="photo_wall_share_message">短信</string>
+    <string name="photo_wall_share_weixin_friends">发送给朋友</string>
+    <string name="photo_wall_share_weixin_timeline">发送到朋友圈</string>
+    
+    <string name="confirm">确定</string>
+    <string name="upload">上传</string>
+    <string name="choose_upload">选照片</string>
+    <string name="choose_upload_num">%d/9</string>
+    <string name="write_text">记录文字</string>
+    
+</resources>

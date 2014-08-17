@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_event_time_size">15sp</dimen>
+    <dimen name="item_event_creater_size">12sp</dimen>
+    <dimen name="item_event_title_size">28sp</dimen>
+    <dimen name="item_event_record_name_size">18sp</dimen>
+    <dimen name="item_event_record_grid_space">5dip</dimen>
+    
+    <dimen name="join_event_entry_title_size">22sp</dimen>
+    <dimen name="date_picker_time_size">8sp</dimen>
+    <dimen name="date_picker_type_size">12sp</dimen>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.medialab.lejuju.views.BlurImageView
+        android:id="@+id/event_discuss_bg"
+        android:layout_width="match_parent"
+        android:layout_height="400dip"
+        android:layout_marginTop="-100dip"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/header_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="16dip" >
+
+            <LinearLayout
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/photo_back_bg"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/back_btn_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/actionbar_btn_exit_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/eventdetail_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/photo_back_bg"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/eventdetail_btn_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/actionbar_btn_detail_normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.medialab.lejuju.views.AutoPullDownRefreshView
+            android:id="@+id/chatting_pull_down_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+            <ListView
+                android:id="@+id/group_comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:listSelector="@null"
+                android:overScrollMode="never"
+                android:scrollingCache="true" >
+            </ListView>
+        </com.medialab.lejuju.views.AutoPullDownRefreshView>
+
+        <LinearLayout
+            android:id="@+id/event_detail_group_comment_bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:background="@drawable/event_detail_group_comment_text_bg"
+            android:gravity="center_vertical|center"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/event_detail_text_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/event_detail_group_comment_edit_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="请输入文字"
+                android:singleLine="true"
+                android:textColor="#000" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/send_text_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dip"
+                android:src="@drawable/send_bg" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

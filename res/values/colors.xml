@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="edit_event_item_title">#474747</color>
+    <color name="edit_event_item_content">#555555</color>
+    <color name="white">#ffffff</color>
+    <color name="white_alpha">#e6ffffff</color>
+    
+    <!-- add by zenghui 2013.9.06 -->
+    
+    <color name="content_bg">#f7f7f7</color>
+    <color name="header_line_up">#f0f0f0</color>
+    <color name="header_line_down">#b8b8b8</color>
+    <color name="header_text_color">#000000</color>
+    
+    <color name="item_trends_bg">#fafafa</color>
+    
+    <color name="event_detail_like_color">#fb1359</color>
+</resources>

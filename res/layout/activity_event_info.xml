@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_default_height"
+            android:background="@color/white" >
+
+            <LinearLayout
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/back_btn_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/action_bar_back" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/header_line_up_height"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/back_btn"
+                android:background="@color/header_line_down" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="活动信息"
+                android:textColor="@color/header_text_color"
+                android:textSize="@dimen/action_bar_title_text_size" />
+
+            <LinearLayout
+                android:id="@+id/ok_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/ok_btn_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/action_bar_ok" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/ok_left_line"
+                android:layout_width="@dimen/header_line_up_height"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ok_btn"
+                android:background="@color/header_line_down" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_line_up_height"
+            android:background="@color/header_line_up" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_line_down_height"
+            android:background="@color/header_line_down" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dip" >
+
+            <!-- 标题 -->
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/box_background" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:text="主题"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/event_info_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="16dip"
+                        android:singleLine="true"
+                        android:textColor="#3d5291"
+                        android:background="@null"
+                        android:textSize="18sp" >
+                    </EditText>
+                </TableRow>
+            </TableLayout>
+
+            <!-- 是否允许邀请好友 -->
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/box_background" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:text="是否允许邀请好友"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <ToggleButton
+                        android:id="@+id/allow_invite_friends_toggle_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/toggle_bg"
+                        android:textColor="@android:color/white"
+                        android:textOff=""
+                        android:textOn=""
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+
+            <!-- 是否自由加入活动 -->
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/box_background" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:text="是否自由加入活动"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <ToggleButton
+                        android:id="@+id/can_join_event_free_toggle_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/toggle_bg"
+                        android:textColor="@android:color/white"
+                        android:textOff=""
+                        android:textOn=""
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="10dip"
+                android:text="不需要审核就可以参加进来"
+                android:textColor="#767573"
+                android:textSize="14sp" />
+            <!-- 是否公开 -->
+
+            <TableLayout
+                android:id="@+id/event_open_state_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/box_background" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:text="隐私设置"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/event_open_state_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="8dip"
+                        android:textColor="#3d5291"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_right" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/event_open_state_introduce_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="10dip"
+                android:textColor="#767573"
+                android:textSize="14sp" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/box_background" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:text="开启邀请码"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|right" >
+
+                        <ToggleButton
+                            android:id="@+id/open_invite_code_toggle_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/toggle_bg"
+                            android:checked="true"
+                            android:textColor="@android:color/white"
+                            android:textOff=""
+                            android:textOn=""
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_line" >
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:text="邀请码"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/invite_code_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="right"
+                        android:textColor="#3d5291"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_line" >
+                </TableRow>
+                <!-- region -->
+
+                <TableRow
+                    android:id="@+id/get_new_invite_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="获取新的邀请码"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="10dip"
+                android:text="邀请码能让你的好友方便快捷地找到该活动"
+                android:textColor="#767573"
+                android:textSize="14sp" />
+            <!-- 时间 -->
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/box_background" >
+
+                <TableRow
+                    android:id="@+id/event_start_time_row"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:text="开始时间"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/event_start_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingRight="8dip"
+                        android:textColor="#3d5291"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_right" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_line" >
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/event_end_time_row"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:text="结束时间"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/event_end_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingRight="8dip"
+                        android:textColor="#3d5291"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_right" />
+                </TableRow>
+            </TableLayout>
+
+            <!-- 地址 -->
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/box_background_with_90" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:text="地点"
+                        android:textColor="#36383c"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/edit_event_address_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请输入活动地址或点击地图选取"
+                        android:maxLength="14"
+                        android:singleLine="true" >
+                    </EditText>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_line" >
+                </TableRow>
+
+                <ImageView
+                    android:id="@+id/map_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop" />
+            </TableLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动简介"
+                android:layout_marginTop="10dip"
+                android:layout_marginLeft="10dip"
+                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginBottom="5dip"
+                android:background="@drawable/box_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/event_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <Button
+                    android:id="@+id/report_event_btn"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/action_bar_default_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/red_button_bg"
+                    android:text="举报活动"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <Button
+                    android:id="@+id/exit_event_btn"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/action_bar_default_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/red_button_bg"
+                    android:text="退出活动"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/event_detail_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/event_detail_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/event_detail_add_user" />
+
+        <TextView
+            android:id="@+id/event_detail_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/event_detail_pic"
+            android:layout_alignLeft="@id/event_detail_pic"
+            android:background="#B0000000"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="增辉"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

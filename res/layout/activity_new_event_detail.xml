@@ -1,0 +1,318 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg" >
+
+    <!-- 最底下的背景层 -->
+
+    <ImageView
+        android:id="@+id/bottom_bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="400dip"
+        android:layout_marginTop="-100dip"
+        android:scaleType="centerCrop" />
+    <!-- 毛玻璃效果层 -->
+
+    <com.medialab.lejuju.views.BlurImageView
+        android:id="@+id/blurred_middle_image"
+        android:layout_width="match_parent"
+        android:layout_height="400dip"
+        android:layout_marginTop="-100dip"
+        android:scaleType="centerCrop"
+        android:visibility="invisible" />
+
+    <!-- 毛玻璃效果层 -->
+
+    <LinearLayout
+        android:id="@+id/blurred_image_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:orientation="vertical" >
+
+        <com.medialab.lejuju.views.BlurImageView
+            android:id="@+id/blurred_image"
+            android:layout_width="match_parent"
+            android:layout_height="400dip"
+            android:layout_marginTop="-100dip"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <!-- 内容层 -->
+
+    <LinearLayout
+        android:id="@+id/bottom_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dip"
+        android:layout_marginTop="-100dip"
+        android:background="@drawable/event_list_title_bg"
+        android:gravity="bottom"
+        android:visibility="invisible"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <!-- 内容层 -->
+
+    <LinearLayout
+        android:id="@+id/top_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dip"
+        android:layout_marginTop="-100dip"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="4dip" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/top_content_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/event_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip"
+                    android:src="@drawable/event_i" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/top_content_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/top_content_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:fadingEdge="none"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/top_user_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <GridView
+                        android:id="@+id/top_user_gridview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:listSelector="@null" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- listview 层 -->
+
+    <RelativeLayout
+        android:id="@+id/top_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/header_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip" >
+
+            <LinearLayout
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/photo_back_bg"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/back_btn_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_button" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:id="@+id/header_middle_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="@drawable/photo_back_bg"
+                    android:gravity="center"
+                    android:visibility="invisible" >
+
+                    <ImageView
+                        android:id="@+id/header_middle_btn_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/chat_normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/header_middle_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dip" >
+
+                    <TextView
+                        android:id="@+id/header_middle_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/header_middle_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/photo_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/photo_back_bg"
+                android:gravity="center"
+                android:visibility="invisible" >
+
+                <ImageView
+                    android:id="@+id/photo_btn_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/take_photo_normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.medialab.lejuju.views.EDListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header_title_view"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:drawSelectorOnTop="false"
+            android:listSelector="#00000000"
+            android:overScrollMode="never" >
+        </com.medialab.lejuju.views.EDListView>
+
+        <LinearLayout
+            android:id="@+id/bottom_btn_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_default_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_alpha"
+            android:orientation="horizontal"
+            android:paddingLeft="18dip"
+            android:paddingRight="18dip" >
+
+            <TextView
+                android:id="@+id/text_btn_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_default_height"
+                android:gravity="center_vertical"
+                android:text="评论"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_btn_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_default_height"
+                android:gravity="center_vertical"
+                android:text="赞"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_btn_like"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_default_height"
+                android:gravity="center_vertical"
+                android:text="我也组织"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/text_btn_join"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_default_height"
+                android:gravity="center_vertical"
+                android:text="参加"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_default_height"
+                android:gravity="center_vertical"
+                android:text="分享"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_btn_has_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_default_height"
+                android:gravity="center_vertical"
+                android:text="已报名"
+                android:textColor="#f70054"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

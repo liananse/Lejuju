@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="camera_items">
+        <item >选择本地照片</item>
+        <item >拍照</item>
+    </string-array>
+    <string-array name="message_key">
+        <item>message_beizan</item>
+    </string-array>
+    <string-array name="user_info_more">
+        <item >删除好友</item>
+    </string-array>
+    
+    <string-array name="exit_items">
+        <item >退出登录</item>
+        <item >取消</item>
+    </string-array>
+    
+    <string-array name="open_state_choose">
+        <item >邀请参加</item>
+        <item >朋友公开</item>
+        <item >完全公开</item>
+    </string-array>
+    
+    <string-array name="dialog_self">
+        <item >设为封面</item>
+        <item >删除</item>
+        <item >保存</item>
+    </string-array>
+    
+    <string-array name="dialog_other">
+        <item >保存</item>
+    </string-array>
+    
+    <string-array name="dialog_change_header">
+        <item >修改头像</item>
+    </string-array>
+</resources> 
